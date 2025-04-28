@@ -3,7 +3,7 @@ class World {
     character = new Character();
     enemies = [
         new Spider(),
-        new Spider(),
+        new Mosquito(),
         new Spider(),
     ];
     canvas;
