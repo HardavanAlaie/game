@@ -1,4 +1,4 @@
-class Chicken extends MovableObject {
+class Spider extends MovableObject {
     
     constructor() {
         super().loadImage('img/spider.png');
