@@ -8,5 +8,5 @@ function init() {
 
     console.log('My Character', world.character);
     console.log('My Character', world['character']);
-    console.log('The Enemie', world.enemies[0]);
+    console.log('The Enemie', world.enemies);
 }

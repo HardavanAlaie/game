@@ -4,7 +4,7 @@ class World {
     enemies = [
         new Spider(),
         new Mosquito(),
-        new Spider(),
+        new Ghost(),
     ];
     canvas;
     ctx;
