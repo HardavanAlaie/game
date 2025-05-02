@@ -6,6 +6,9 @@ class World {
         new Mosquito(),
         new Ghost(),
     ];
+    fogs = [
+        new Fog()
+    ];
     canvas;
     ctx;
 
@@ -23,6 +26,10 @@ class World {
         //this.enemies.forEach((enemy) => this.ctx.drawImage(enemy.img, enemy.x, enemy.y, enemy.width, enemy.height));  // Variante 1
         this.enemies.forEach(enemy => {                                                                                      // Variante 2                     
             this.ctx.drawImage(enemy.img, enemy.x, enemy.y, enemy.width, enemy.height);
+        });
+
+        this.fogs.forEach(fog => {                                                                                                      
+            this.ctx.drawImage(fog.img, fog.x, fog.y, fog.width, fog.height);
         });
 
         //requestAnimationFrame(() => this.draw());  // draw() wird immer wieder aufgerufen. Variante 1
