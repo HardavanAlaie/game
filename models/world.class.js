@@ -9,6 +9,9 @@ class World {
     fogs = [
         new Fog()
     ];
+    rocks = [
+        new RockBottom()
+    ];
     canvas;
     ctx;
 
@@ -30,6 +33,10 @@ class World {
 
         this.fogs.forEach(fog => {                                                                                                      
             this.ctx.drawImage(fog.img, fog.x, fog.y, fog.width, fog.height);
+        });
+
+        this.rocks.forEach(rock => {                                                                                                      
+            this.ctx.drawImage(rock.img, rock.x, rock.y, rock.width, rock.height);
         });
 
         //requestAnimationFrame(() => this.draw());  // draw() wird immer wieder aufgerufen. Variante 1
