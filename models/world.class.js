@@ -11,6 +11,7 @@ class World {
     ];
     backgroundObject = [
         new BackgroundObject('img/bg/bg2/rock1.png', 0, 178),
+        new BackgroundObject('img/bg/bg2/rock2.png', 0, 0)
     ];
     canvas;
     ctx;
