@@ -6,12 +6,17 @@ class World {
         new Mosquito(),
         new Ghost(),
     ];
-    fogs = [
-        new Fog('img/bg/bg2/myst.png')
-    ];
+    // fogs = [
+    //     new Fog('img/bg/bg2/myst.png')
+    // ];
     backgroundObject = [
-        new BackgroundObject('img/bg/bg2/rock1.png', 0, 178),
-        new BackgroundObject('img/bg/bg2/rock2.png', 0, 0)
+        // new BackgroundObject('img/bg/bg2/bg.png', 0, 90),
+        // new BackgroundObject('img/bg/bg2/rock4.png', 0, 90),
+        // new BackgroundObject('img/bg/bg2/rock3.png', 0, 90),
+         new BackgroundObject('img/bg/bg2/rock2.png', 0, 5),
+         new BackgroundObject('img/bg/bg2/rock1.png', 0, 178),
+         new BackgroundObject('img/bg/bg2/myst.png', 0, 90)
+        
     ];
     canvas;
     ctx;
@@ -27,7 +32,7 @@ class World {
 
         this.addToMap(this.character);
         this.addObjectsToMap(this.enemies);
-        this.addObjectsToMap(this.fogs);
+        //this.addObjectsToMap(this.fogs);
         this.addObjectsToMap(this.backgroundObject);
 
         //requestAnimationFrame(() => this.draw());  // draw() wird immer wieder aufgerufen. Variante 1
