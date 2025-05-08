@@ -3,14 +3,14 @@ class Mosquito extends MovableObject {
         super().loadImage('img/mosquito.png');
 
         this.x = 200 + Math.random() * 500;
-        this.animate();
+        //this.animate();
     }
 
-    animate() {
-        setInterval(() => {
-            this.x -= 0.2;
-        }, 1000 / 60);
-    }
+    // animate() {
+    //     setInterval(() => {
+    //         this.x -= 0.2;
+    //     }, 1000 / 60);
+    // }
 }
 
 
