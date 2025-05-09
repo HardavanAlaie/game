@@ -1,4 +1,5 @@
 class Character extends MovableObject {
+  
   IMAGES_RUNNING = [
     'img/run1.png',
     'img/run2.png',
@@ -8,8 +9,8 @@ class Character extends MovableObject {
     'img/run6.png',
     'img/run7.png',
     'img/run8.png'
-
   ];
+
 
   currentImage = 0;
 
@@ -23,7 +24,7 @@ class Character extends MovableObject {
   animate() {
     setInterval(() => {
       let i = this.currentImage % this.IMAGES_RUNNING.length;
-      let path = IMAGES_RUNNING[i];
+      let path = this.IMAGES_RUNNING[i];
       this.img = this.imageCache[path];
       this.currentImage++;
     }, 100);
