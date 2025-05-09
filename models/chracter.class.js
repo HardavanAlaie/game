@@ -1,16 +1,16 @@
 class Character extends MovableObject {
-  
-  IMAGES_RUNNING = [
-    'img/run1.png',
-    'img/run2.png',
-    'img/run3.png',
-    'img/run4.png',
-    'img/run5.png',
-    'img/run6.png',
-    'img/run7.png',
-    'img/run8.png'
-  ];
+  height = 150;
 
+  IMAGES_RUNNING = [
+    "img/hero/run1.png",
+    "img/hero/run2.png",
+    "img/hero/run3.png",
+    "img/hero/run4.png",
+    "img/hero/run5.png",
+    "img/hero/run6.png",
+    "img/hero/run7.png",
+    "img/hero/run8.png",
+  ];
 
   currentImage = 0;
 

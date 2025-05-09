@@ -7,6 +7,15 @@ class Ghost extends MovableObject{
         //this.animate();
     }
 
+      animate() {
+    setInterval(() => {
+      let i = this.currentImage % this.IMAGES_RUNNING.length;
+      let path = this.IMAGES_RUNNING[i];
+      this.img = this.imageCache[path];
+      this.currentImage++;
+    }, 100);
+  }
+  
     // animate() {
     //     setInterval(() => {
     //         this.x -= 0.2;
