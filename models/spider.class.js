@@ -12,13 +12,14 @@ class Spider extends MovableObject {
     super().loadImage("img/spider.png");
     this.loadImages(this.IMAGES_RUNNING);
 
-    this.animate();
-
     this.x = 200 + Math.random() * 500;
-    //this.animate();
+    this.speed = 0.15 + Math.random() * 0.5;
+    this.animate();
   }
 
   animate() {
+    this.moveLeft();
+
     setInterval(() => {
       let i = this.currentImage % this.IMAGES_RUNNING.length;
       let path = this.IMAGES_RUNNING[i];
@@ -27,9 +28,4 @@ class Spider extends MovableObject {
     }, 100);
   }
 
-  // animate() {
-  //     setInterval(() => {
-  //         this.x -= 0.2;
-  //     }, 1000 / 60);
-  // }
 }
