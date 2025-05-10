@@ -11,8 +11,9 @@ class Character extends MovableObject {
     "img/hero/run7.png",
     "img/hero/run8.png",
   ];
+  world;
 
-  currentImage = 0;
+  //currentImage = 0;
 
   constructor() {
     super().loadImage("img/warrior.png");
@@ -23,10 +24,13 @@ class Character extends MovableObject {
 
   animate() {
     setInterval(() => {
-      let i = this.currentImage % this.IMAGES_RUNNING.length;
-      let path = this.IMAGES_RUNNING[i];
-      this.img = this.imageCache[path];
-      this.currentImage++;
+      if (this.world.keyboard.RIGHT) {
+
+        let i = this.currentImage % this.IMAGES_RUNNING.length;
+        let path = this.IMAGES_RUNNING[i];
+        this.img = this.imageCache[path];
+        this.currentImage++;
+      }
     }, 100);
   }
 
