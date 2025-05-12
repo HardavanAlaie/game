@@ -1,5 +1,6 @@
 class Character extends MovableObject {
   height = 150;
+  speed = 10;
 
   IMAGES_RUNNING = [
     "img/hero/run1.png",
@@ -25,13 +26,23 @@ class Character extends MovableObject {
   animate() {
     setInterval(() => {
       if (this.world.keyboard.RIGHT) {
+        this.x += this.speed;
+      }
 
+      if (this.world.keyboard.LEFT) {
+        this.x -= this.speed;
+      }
+    }, 1000 / 60);
+
+    setInterval(() => {
+      if (this.world.keyboard.RIGHT || this.world.keyboard.LEFT) {
+        //walk animation
         let i = this.currentImage % this.IMAGES_RUNNING.length;
         let path = this.IMAGES_RUNNING[i];
         this.img = this.imageCache[path];
         this.currentImage++;
       }
-    }, 100);
+    }, 50);
   }
 
   jump() {}
