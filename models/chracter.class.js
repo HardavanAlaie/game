@@ -13,7 +13,7 @@ class Character extends MovableObject {
   ];
   world;
 
-  //currentImage = 0;
+  currentImage = 0;
 
   constructor() {
     super().loadImage("img/warrior.png");
