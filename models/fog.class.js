@@ -5,7 +5,7 @@ class Fog extends MovableObject {
 
 
   constructor(imagePath) {
-    super().loadImage(imagePath);
+    super().loadImage("img/bg/bg2/myst.png");
 
     this.x = 10 + Math.random() * 500;
     this.animate();
