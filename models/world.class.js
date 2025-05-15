@@ -9,14 +9,21 @@ class World {
     new Fog()
   ];
   backgroundObject = [
-    new BackgroundObject("img/bg/bg2/bg.png", 0, 90),
-    new BackgroundObject("img/bg/bg2/rock4.png", 0, 90),
-    new BackgroundObject("img/bg/bg2/rock3.png", 0, 90),
-    new BackgroundObject("img/bg/bg2/rock2.png", 0, 5),
-    new BackgroundObject("img/bg/bg2/rock1.png", 0, 178),
-    //new BackgroundObject('img/bg/bg2/myst.png', 0, 90)
-    new BackgroundObject("img/bg/bg2/rock2.png", 720, 5),
-    new BackgroundObject("img/bg/bg2/rock1.png", 720, 178),
+    new BackgroundObject("img/bg/bg2/bg.png", 0,),
+    new BackgroundObject("img/bg/bg2/rock4.png", 0),
+    new BackgroundObject("img/bg/bg2/rock3.png", 0),
+    new BackgroundObject("img/bg/bg2/rock2.png", 0),
+    new BackgroundObject("img/bg/bg2/rock1.png", 0),
+    // //new BackgroundObject('img/bg/bg2/myst.png', 0),
+    new BackgroundObject("img/bg/bg2/bg.png", 720),
+    new BackgroundObject("img/bg/bg2/rock4.png", 720),
+    new BackgroundObject("img/bg/bg2/rock3.png", 720),
+    new BackgroundObject("img/bg/bg2/rock2.png", 720),
+    new BackgroundObject("img/bg/bg2/rock1.png", 720),
+    new BackgroundObject("img/bg/bg2/bg.png", -720),
+    new BackgroundObject("img/bg/bg2/rock4.png", -720),
+    new BackgroundObject("img/bg/bg2/rock3.png", -720),
+    new BackgroundObject("img/bg/bg2/rock1.png", -720),
   ];
   canvas;
   ctx;
