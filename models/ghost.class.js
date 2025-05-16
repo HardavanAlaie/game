@@ -1,15 +1,15 @@
 class Ghost extends MovableObject {
   IMAGES_RUNNING = [
-'img/ghost/ghost01_idle1.png',
-'img/ghost/ghost02_idle2.png',
-'img/ghost/ghost03_idle3.png',
-'img/ghost/ghost04_walk_turn.png',
-'img/ghost/ghost05_walk1.png',
-'img/ghost/ghost06_walk2.png',
-'img/ghost/ghost07_walk3.png',
-'img/ghost/ghost08_walk4.png',
+    "img/ghost/ghost01_idle1.png",
+    "img/ghost/ghost02_idle2.png",
+    "img/ghost/ghost03_idle3.png",
+    "img/ghost/ghost04_walk_turn.png",
+    "img/ghost/ghost05_walk1.png",
+    "img/ghost/ghost06_walk2.png",
+    "img/ghost/ghost07_walk3.png",
+    "img/ghost/ghost08_walk4.png",
   ];
-  
+
   currentImage = 0;
 
   constructor() {
@@ -24,10 +24,7 @@ class Ghost extends MovableObject {
 
   animate() {
     setInterval(() => {
-      let i = this.currentImage % this.IMAGES_RUNNING.length;
-      let path = this.IMAGES_RUNNING[i];
-      this.img = this.imageCache[path];
-      this.currentImage++;
+      this.playAnimation(this.IMAGES_RUNNING);
     }, 100);
   }
 

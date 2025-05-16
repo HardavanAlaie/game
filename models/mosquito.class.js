@@ -19,10 +19,7 @@ class Mosquito extends MovableObject {
 
   animate() {
     setInterval(() => {
-      let i = this.currentImage % this.IMAGES_RUNNING.length;
-      let path = this.IMAGES_RUNNING[i];
-      this.img = this.imageCache[path];
-      this.currentImage++;
+      this.playAnimation(this.IMAGES_RUNNING);
     }, 100);
   }
 
