@@ -3,7 +3,6 @@ class Fog extends MovableObject {
   width = 600;
   height = 500;
 
-
   constructor() {
     super().loadImage("img/bg/bg2/myst.png");
 
@@ -14,6 +13,4 @@ class Fog extends MovableObject {
   animate() {
     this.moveLeft();
   }
-
-
 }
