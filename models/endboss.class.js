@@ -1,4 +1,7 @@
 class Endboss extends MovableObject {
+  y = 185;
+  width = 300;
+  height = 300;
   IMAGES_RUNNING = [
     "img/endboss1/Walk1.png",
     "img/endboss1/Walk2.png",
