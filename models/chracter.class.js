@@ -17,7 +17,7 @@ class Character extends MovableObject {
   currentImage = 0;
 
   constructor() {
-    super().loadImage("img/warrior.png");
+    super().loadImage(this.IMAGES_RUNNING[0]);
     this.loadImages(this.IMAGES_RUNNING);
 
     this.animate();

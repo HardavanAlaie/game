@@ -9,7 +9,7 @@ class Spider extends MovableObject {
   ];
   currentImage = 0;
   constructor() {
-    super().loadImage("img/spider.png");
+    super().loadImage(this.IMAGES_RUNNING[0]);
     this.loadImages(this.IMAGES_RUNNING);
 
     this.x = 200 + Math.random() * 500;
