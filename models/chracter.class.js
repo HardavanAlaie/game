@@ -13,6 +13,22 @@ class Character extends MovableObject {
     "img/hero/run7.png",
     "img/hero/run8.png",
   ];
+
+  IMAGES_JUMPING = [
+    "img/hero/high_jump1.png",
+    "img/hero/high_jump2.png",
+    "img/hero/high_jump3.png",
+    "img/hero/high_jump4.png",
+    "img/hero/high_jump5.png",
+    "img/hero/high_jump6.png",
+    "img/hero/high_jump7.png",
+    "img/hero/high_jump8.png",
+    "img/hero/high_jump9.png",
+    "img/hero/high_jump10.png",
+    "img/hero/high_jump11.png",
+    "img/hero/high_jump12.png",
+  ];
+
   world;
 
   currentImage = 0;
@@ -20,6 +36,7 @@ class Character extends MovableObject {
   constructor() {
     super().loadImage(this.IMAGES_RUNNING[0]);
     this.loadImages(this.IMAGES_RUNNING);
+    this.loadImages(this.IMAGES_JUMPING);
     this.applyGravity();
     this.animate();
   }
@@ -39,9 +56,14 @@ class Character extends MovableObject {
     }, 1000 / 60);
 
     setInterval(() => {
-      if (this.world.keyboard.RIGHT || this.world.keyboard.LEFT) {
-        //walk animation
-        this.playAnimation(this.IMAGES_RUNNING);
+      if (this.isAboveGround()) {
+        //jump animation
+        this.playAnimation(this.IMAGES_JUMPING);
+      } else {
+        if (this.world.keyboard.RIGHT || this.world.keyboard.LEFT) {
+          //walk animation
+          this.playAnimation(this.IMAGES_RUNNING);
+        }
       }
     }, 50);
   }
