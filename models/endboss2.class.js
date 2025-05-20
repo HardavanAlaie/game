@@ -1,5 +1,5 @@
 class Endboss2 extends MovableObject {
-      y = 185;
+  y = 185;
   width = 300;
   height = 300;
   IMAGES_RUNNING = [
