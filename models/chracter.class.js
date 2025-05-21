@@ -3,31 +3,39 @@ class Character extends MovableObject {
   y = 160;
   speed = 10;
 
-  IMAGES_RUNNING = [
-    "img/hero/run1.png",
-    "img/hero/run2.png",
-    "img/hero/run3.png",
-    "img/hero/run4.png",
-    "img/hero/run5.png",
-    "img/hero/run6.png",
-    "img/hero/run7.png",
-    "img/hero/run8.png",
-  ];
+  IMAGES_RUNNING = Array.from({ length: 8 }, (_, i) => `img/hero/run${i + 1}.png`);
+  // IMAGES_RUNNING = [
+  //   "img/hero/run1.png",
+  //   "img/hero/run2.png",
+  //   "img/hero/run3.png",
+  //   "img/hero/run4.png",
+  //   "img/hero/run5.png",
+  //   "img/hero/run6.png",
+  //   "img/hero/run7.png",
+  //   "img/hero/run8.png",
+  // ];
 
-  IMAGES_JUMPING = [
-    "img/hero/high_jump1.png",
-    "img/hero/high_jump2.png",
-    "img/hero/high_jump3.png",
-    "img/hero/high_jump4.png",
-    "img/hero/high_jump5.png",
-    "img/hero/high_jump6.png",
-    "img/hero/high_jump7.png",
-    "img/hero/high_jump8.png",
-    "img/hero/high_jump9.png",
-    "img/hero/high_jump10.png",
-    "img/hero/high_jump11.png",
-    "img/hero/high_jump12.png",
-  ];
+  
+  // for (let i = 0; i < 8; i++) {
+  //   this.IMAGES_RUNNING[i] = this.IMAGES_RUNNING[i];
+  // } 
+
+
+  IMAGES_JUMPING = Array.from({ length: 12 }, (_, i) => `img/hero/high_jump${i + 1}.png`);
+  // IMAGES_JUMPING = [
+  //   "img/hero/high_jump1.png",
+  //   "img/hero/high_jump2.png",
+  //   "img/hero/high_jump3.png",
+  //   "img/hero/high_jump4.png",
+  //   "img/hero/high_jump5.png",
+  //   "img/hero/high_jump6.png",
+  //   "img/hero/high_jump7.png",
+  //   "img/hero/high_jump8.png",
+  //   "img/hero/high_jump9.png",
+  //   "img/hero/high_jump10.png",
+  //   "img/hero/high_jump11.png",
+  //   "img/hero/high_jump12.png",
+  // ];
 
   world;
 
