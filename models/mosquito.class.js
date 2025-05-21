@@ -1,9 +1,11 @@
 class Mosquito extends MovableObject {
-  IMAGES_RUNNING = [
-    "img/mosquito/idle1.png",
-    "img/mosquito/idle2.png",
-    "img/mosquito/idle3.png",
-  ];
+
+  IMAGES_RUNNING = Array.from({ length: 3 }, (_, i) => `img/mosquito/idle${i + 1}.png`);
+  // IMAGES_RUNNING = [
+  //   "img/mosquito/idle1.png",
+  //   "img/mosquito/idle2.png",
+  //   "img/mosquito/idle3.png",
+  // ];
 
   currentImage = 0;
 

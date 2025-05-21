@@ -1,4 +1,5 @@
 class Ghost extends MovableObject {
+  
   IMAGES_RUNNING = [
     "img/ghost/ghost01_idle1.png",
     "img/ghost/ghost02_idle2.png",
