@@ -1,6 +1,8 @@
 class Spider extends MovableObject {
-
-  IMAGES_RUNNING = Array.from({ length: 6 }, (_, i) => `img/spider/walk${i + 1}.png`);
+  IMAGES_RUNNING = Array.from(
+    { length: 6 },
+    (_, i) => `img/spider/walk${i + 1}.png`
+  );
   // IMAGES_RUNNING = [
   //   "img/spider/walk1.png",
   //   "img/spider/walk2.png",
@@ -20,11 +22,12 @@ class Spider extends MovableObject {
   }
 
   animate() {
-    this.moveLeft();
+    setInterval(() => {
+      this.moveLeft();
+    }, 1000 / 60);
 
     setInterval(() => {
       this.playAnimation(this.IMAGES_RUNNING);
     }, 100);
   }
-
 }

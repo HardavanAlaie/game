@@ -56,8 +56,7 @@ class Character extends MovableObject {
       }
 
       if (this.world.keyboard.LEFT && this.x > 0) {
-        this.x -= this.speed;
-        this.otherDirection = true;
+        this.moveLeft();
       }
 
       if (this.world.keyboard.UP && !this.isAboveGround()) {
@@ -80,5 +79,7 @@ class Character extends MovableObject {
     }, 50);
   }
 
-  jump() {}
+  // jump() {
+  //   this.speedY = 30;
+  // }
 }
