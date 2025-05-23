@@ -37,6 +37,10 @@ class MovableObject {
     });
   }
 
+  draw() {
+    this.ctx.drawImage(this.img, this.x, this.y, this.width, this.height);
+  }
+
   playAnimation(images) {
     let i = this.currentImage % images.length;
     let path = images[i];
