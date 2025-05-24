@@ -1,5 +1,8 @@
 class World {
   character = new Character();
+  enemies = level1.enemies;
+  fogs = level1.fogs;
+  backgroundObject = level1.backgroundObject;
   level = level1;
   canvas;
   ctx;
