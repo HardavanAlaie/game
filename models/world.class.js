@@ -29,7 +29,7 @@ class World {
           console.log('collision ', enemy);
         }
       });
-    }, 1000);
+    }, 200);
   }
 
   draw() {
