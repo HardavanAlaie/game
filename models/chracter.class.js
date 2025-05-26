@@ -2,7 +2,7 @@ class Character extends MovableObject {
   height = 150;
   y = 160;
   speed = 10;
-  
+
 
   IMAGES_RUNNING = Array.from({ length: 8 }, (_, i) => `img/hero/run${i + 1}.png`);
   // IMAGES_RUNNING = [
@@ -38,7 +38,7 @@ class Character extends MovableObject {
   //   "img/hero/high_jump12.png",
   // ];
 
-  IMAGES_DEATH = Array.from({ length: 10 }, (_, i) => `img/hero/death${i + 1}.png`);
+  //IMAGES_DEATH = Array.from({ length: 10 }, (_, i) => `img/hero/death${i + 1}.png`);
 
   world;
 
@@ -81,10 +81,10 @@ class Character extends MovableObject {
           this.playAnimation(this.IMAGES_RUNNING);
         }
       }
-      if (this.isDead()) {
-        this.speed = 0;
-        this.playAnimation(this.IMAGES_DEATH);
-      }
+      // if (this.isDead()) {
+      //   this.speed = 0;
+      //   this.playAnimation(this.IMAGES_DEATH);
+      // }
     }, 50);
   }
 
