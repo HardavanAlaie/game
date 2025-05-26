@@ -68,8 +68,16 @@ class MovableObject {
     );
   }
 
+
+  hit() {
+    this.energy -= 5;
+    if (this.energy < 0) {
+      this.energy = 0;
+    }
+  }
+
   isDead() {
-    return this.energy <= 0;
+    return this.energy == 0;
   }
 
   playAnimation(images) {
