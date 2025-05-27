@@ -40,6 +40,8 @@ class Character extends MovableObject {
 
   IMAGES_DEATH = Array.from({ length: 10 }, (_, i) => `img/hero/death${i + 1}.png`);
 
+  IMAGES_HURT = Array.from({ length: 4 }, (_, i) => `img/hero/hurt${i + 1}.png`);
+
   world;
 
   currentImage = 0;
@@ -49,6 +51,7 @@ class Character extends MovableObject {
     this.loadImages(this.IMAGES_RUNNING);
     this.loadImages(this.IMAGES_JUMPING);
     this.loadImages(this.IMAGES_DEATH);
+    this.loadImages(this.IMAGES_HURT);
     this.applyGravity();
     this.animate();
   }
@@ -75,6 +78,8 @@ class Character extends MovableObject {
     setInterval(() => {
       if (this.isDead()) {
         this.playAnimation(this.IMAGES_DEATH);
+      } else if (this.isHurt()) {
+        this.playAnimation(this.IMAGES_HURT);
       } else if (this.isAboveGround()) {
         //jump animation
         this.playAnimation(this.IMAGES_JUMPING);
