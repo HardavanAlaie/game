@@ -3,8 +3,10 @@ class Character extends MovableObject {
   y = 160;
   speed = 10;
 
-
-  IMAGES_RUNNING = Array.from({ length: 8 }, (_, i) => `img/hero/run${i + 1}.png`);
+  IMAGES_RUNNING = Array.from(
+    { length: 8 },
+    (_, i) => `img/hero/run${i + 1}.png`
+  );
   // IMAGES_RUNNING = [
   //   "img/hero/run1.png",
   //   "img/hero/run2.png",
@@ -16,13 +18,14 @@ class Character extends MovableObject {
   //   "img/hero/run8.png",
   // ];
 
-  
   // for (let i = 0; i < 8; i++) {
   //   this.IMAGES_RUNNING[i] = this.IMAGES_RUNNING[i];
-  // } 
+  // }
 
-
-  IMAGES_JUMPING = Array.from({ length: 12 }, (_, i) => `img/hero/high_jump${i + 1}.png`);
+  IMAGES_JUMPING = Array.from(
+    { length: 12 },
+    (_, i) => `img/hero/high_jump${i + 1}.png`
+  );
   // IMAGES_JUMPING = [
   //   "img/hero/high_jump1.png",
   //   "img/hero/high_jump2.png",
@@ -38,9 +41,15 @@ class Character extends MovableObject {
   //   "img/hero/high_jump12.png",
   // ];
 
-  IMAGES_DEATH = Array.from({ length: 10 }, (_, i) => `img/hero/death${i + 1}.png`);
+  IMAGES_DEATH = Array.from(
+    { length: 10 },
+    (_, i) => `img/hero/death${i + 1}.png`
+  );
 
-  IMAGES_HURT = Array.from({ length: 4 }, (_, i) => `img/hero/hurt${i + 1}.png`);
+  IMAGES_HURT = Array.from(
+    { length: 4 },
+    (_, i) => `img/hero/hurt${i + 1}.png`
+  );
 
   world;
 
@@ -75,6 +84,9 @@ class Character extends MovableObject {
       if (this.world.keyboard.SPACE) {
         this.throw();
       }
+      // if (this.world.keyboard.D) {
+      //   this.throw();
+      // }
 
       this.world.camera_x = -this.x + 100;
     }, 1000 / 60);
