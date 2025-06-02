@@ -32,6 +32,15 @@ class World {
   }
 
   checkThrowableObjects() {
+
+    if (this.throwableObject.length > 0) {
+      this.throwableObject.forEach((bottle) => {
+        if (bottle.isDead()) {
+          this.throwableObject.splice(this.throwableObject.indexOf(bottle), 1);
+        }
+      });
+    }  
+    
     if (this.keyboard.SPACE) {
       let bottle = new ThrowableObject(
         this.character.x + 100,
