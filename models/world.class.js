@@ -25,8 +25,7 @@ class World {
   }
 
   run() {
-    setInterval (() => {
-
+    setInterval(() => {
       this.checkCollisions();
       this.checkThrowableObjects();
     }, 200);
@@ -34,24 +33,27 @@ class World {
 
   checkThrowableObjects() {
     if (this.keyboard.SPACE) {
-      let bottle = new ThrowableObject(this.character.x + 100, this.character.y + 100);
+      let bottle = new ThrowableObject(
+        this.character.x + 100,
+        this.character.y + 100
+      );
       this.throwableObject.push(bottle);
     }
   }
 
   checkCollisions() {
-      this.level.enemies.forEach((enemy) => {
-        if (this.character.isColliding(enemy)) {
-          this.character.hit();
-          this.statusBar.setPercentage(this.character.energy);
-          this.character.isHurt();
-          //console.log('energy ', this.character.energy);
-        }
-        // if (this.character.isDead()) {
-        //   this.character.energy = 0;
-        //   console.log('dead ', this.character.energy);
-        // }
-      });
+    this.level.enemies.forEach((enemy) => {
+      if (this.character.isColliding(enemy)) {
+        this.character.hit();
+        this.statusBar.setPercentage(this.character.energy);
+        this.character.isHurt();
+        //console.log('energy ', this.character.energy);
+      }
+      // if (this.character.isDead()) {
+      //   this.character.energy = 0;
+      //   console.log('dead ', this.character.energy);
+      // }
+    });
   }
 
   draw() {
