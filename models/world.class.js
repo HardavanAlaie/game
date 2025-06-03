@@ -58,6 +58,14 @@ class World {
         this.character.isHurt();
         //console.log('energy ', this.character.energy);
       }
+      // if (this.character.isColliding(bottle)) {
+
+      // }
+      // if (this.throwableObject.isColliding(enemy)) {
+      //   this.throwableObject.splice(this.throwableObject.indexOf(bottle), 1);
+      //   this.level.enemies.splice(this.level.enemies.indexOf(enemy), 1);
+      //   this.statusBar.setPercentage(this.enemy.energy);
+      // }
       // if (this.character.isDead()) {
       //   this.character.energy = 0;
       //   console.log('dead ', this.character.energy);
