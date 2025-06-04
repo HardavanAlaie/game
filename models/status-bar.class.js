@@ -1,11 +1,11 @@
 class StatusBar extends DrawableObject {
   IMAGES = [
-    'img/gameui/0.png',
-    'img/gameui/20.png',
-    'img/gameui/40.png',
-    'img/gameui/60.png',
-    'img/gameui/80.png',
-    'img/gameui/100.png',
+    "img/gameui/0.png",
+    "img/gameui/20.png",
+    "img/gameui/40.png",
+    "img/gameui/60.png",
+    "img/gameui/80.png",
+    "img/gameui/100.png",
   ];
 
   percentage = 100;
@@ -42,10 +42,10 @@ class StatusBar extends DrawableObject {
     }
   }
 
-//   animate() {
-//     setInterval(() => {
-//       //this.setPercentage(this.percentage - 20);
-//       //this.world.camera_x = -this.x + 100;0;
-//     }, 1000 / 60);
-//   }
+  //   animate() {
+  //     setInterval(() => {
+  //       //this.setPercentage(this.percentage - 20);
+  //       //this.world.camera_x = -this.x + 100;0;
+  //     }, 1000 / 60);
+  //   }
 }
