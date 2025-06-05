@@ -13,21 +13,39 @@ class Mosquito extends MovableObject {
     super().loadImage(this.IMAGES_RUNNING[0]);
     this.loadImages(this.IMAGES_RUNNING);
 
-    this.animate();
+    
 
     this.x = 200 + Math.random() * 500;
-    //this.animate();
+        this.y = 185;
+    this.width = 60;
+    this.height = 60;
+    this.energy = 100;
+    this.statusBar = new StatusBarEnemy(this.x, this.y - 15);
+    this.animate();
   }
 
-  animate() {
-    setInterval(() => {
-      this.playAnimation(this.IMAGES_RUNNING);
-    }, 100);
+    updateStatusBar() {
+    this.statusBar.x = this.x;
+    this.statusBar.y = this.y - 15;
+    this.statusBar.setPercentage(this.energy);
   }
+
+  hit() {
+    this.energy -= 20;
+    if (this.energy < 0) this.energy = 0;
+    this.updateStatusBar();
+  }
+}
 
   // animate() {
-  //     setInterval(() => {
-  //         this.x -= 0.2;
-  //     }, 1000 / 60);
+  //   setInterval(() => {
+  //     this.playAnimation(this.IMAGES_RUNNING);
+  //   }, 100);
   // }
-}
+
+  animate() {
+      setInterval(() => {
+          this.x -= 0.2;
+      }, 1000 / 60);
+  }
+

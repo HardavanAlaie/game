@@ -1,7 +1,7 @@
 const level1 = new Level(
   [
     new Spider(), 
-    new Mosquito(), 
+    new Mosquito(400, 350), 
     new Ghost(),
     new Endboss(),
     new Endboss2()
