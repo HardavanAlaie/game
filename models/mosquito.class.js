@@ -1,6 +1,8 @@
 class Mosquito extends MovableObject {
-
-  IMAGES_RUNNING = Array.from({ length: 3 }, (_, i) => `img/mosquito/idle${i + 1}.png`);
+  IMAGES_RUNNING = Array.from(
+    { length: 3 },
+    (_, i) => `img/mosquito/idle${i + 1}.png`
+  );
   // IMAGES_RUNNING = [
   //   "img/mosquito/idle1.png",
   //   "img/mosquito/idle2.png",
@@ -13,10 +15,8 @@ class Mosquito extends MovableObject {
     super().loadImage(this.IMAGES_RUNNING[0]);
     this.loadImages(this.IMAGES_RUNNING);
 
-    
-
     this.x = 200 + Math.random() * 500;
-        this.y = 185;
+    this.y = 185;
     this.width = 60;
     this.height = 60;
     this.energy = 100;
@@ -24,7 +24,7 @@ class Mosquito extends MovableObject {
     this.animate();
   }
 
-    updateStatusBar() {
+  updateStatusBar() {
     this.statusBar.x = this.x;
     this.statusBar.y = this.y - 15;
     this.statusBar.setPercentage(this.energy);
@@ -35,17 +35,16 @@ class Mosquito extends MovableObject {
     if (this.energy < 0) this.energy = 0;
     this.updateStatusBar();
   }
-}
-
-  // animate() {
-  //   setInterval(() => {
-  //     this.playAnimation(this.IMAGES_RUNNING);
-  //   }, 100);
-  // }
 
   animate() {
-      setInterval(() => {
-          this.x -= 0.2;
-      }, 1000 / 60);
+    setInterval(() => {
+      this.x -= 0.2;
+    }, 1000 / 60);
   }
+}
 
+// animate() {
+//   setInterval(() => {
+//     this.playAnimation(this.IMAGES_RUNNING);
+//   }, 100);
+// }
